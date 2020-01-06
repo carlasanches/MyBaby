@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ExtraActionActivity"
+    android:orientation="vertical"
+    android:layout_margin="8dp">
+
+    <ImageButton
+        android:id="@+id/newActivity"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/round_icon_puzzle_add"
+        android:background="@null"
+        android:onClick="showDialog"/>
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginBottom="20dp"
+    android:text="Adicionar Nova Atividade"/>
+
+    <Spinner
+        android:id="@+id/activityTypeSpinner"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"></Spinner>
+
+    <EditText
+        android:id="@+id/dateEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="false"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/timeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="false"
+        android:layout_marginBottom="10dp"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/currentTimeText"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginBottom="15dp"-->
+        <!--android:textSize="40dp"/>-->
+
+
+    <EditText
+        android:id="@+id/aboutActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:inputType="textCapSentences"
+        android:hint="Anotação..."/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancelar"
+            android:onClick="cancel"/>
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Salvar"
+            android:onClick="save"/>
+    </LinearLayout>
+
+</LinearLayout>

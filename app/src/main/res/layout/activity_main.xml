@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_margin="8dp">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"></TabWidget>
+            </HorizontalScrollView>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/wombSoundButton"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/icon_uterus_play"
+                        android:scaleType="centerInside"
+                        android:onClick="playPauseSound"
+                        android:background="@null"/>
+
+                    <HorizontalScrollView
+                        android:id="@+id/scrollItems"
+                        android:layout_toRightOf="@id/wombSoundButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/imageButtonBreastFeeding"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:onClick="breastFeeding"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/round_icon_brassiere"
+                                android:layout_gravity="center"
+                                android:background="@null"/>
+
+                            <ImageButton
+                                android:id="@+id/imageButtonBabyBottle"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="centerInside"
+                                android:onClick="babyBottle"
+                                android:src="@drawable/round_icon_baby_bottle"
+                                android:background="@null"/>
+
+                            <ImageButton
+                                android:id="@+id/imageButtonDiaper"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="centerInside"
+                                android:onClick="diaper"
+                                android:src="@drawable/round_icon_nappy"
+                                android:background="@null"/>
+
+                            <ImageButton
+                                android:id="@+id/imageButtonSleep"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="centerInside"
+                                android:onClick="sleep"
+                                android:src="@drawable/round_icon_cradle"
+                                android:background="@null"/>
+
+                            <ImageButton
+                                android:id="@+id/imageButtonMedicine"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:scaleType="centerInside"
+                                android:onClick="medicine"
+                                android:src="@drawable/round_icon_pill"
+                                android:background="@null"/>
+
+                            <ImageButton
+                                android:id="@+id/imageButtonAdd"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:onClick="addExtraAction"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/round_icon_puzzle"
+                                android:background="@null"/>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/wombSoundButton"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/listBabyActivities"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </ListView>
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/buttonFilter"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="bottom|right"
+                        android:onClick="showDialog"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/round_icon_funnel_light"
+                        android:background="@null"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.jjoe64.graphview.GraphView
+                        android:id="@+id/graph"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/editBabyButton"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/icon_boy"
+                        android:scaleType="centerInside"
+                        android:onClick="editBaby"/>
+
+                    <ImageButton
+                        android:id="@+id/setNotificationButton"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ring"
+                        android:scaleType="centerInside"
+                        android:onClick="setNotification"/>
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/tab2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="#da8200"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="This is tab 2" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/tab3"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="#5b89ff"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="This is tab 3" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/tab4"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="#00ff00"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="This is tab 4" />-->
+
+                <!--</LinearLayout>-->
+            </FrameLayout>
+
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

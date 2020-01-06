@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="carla.ufop.br.mybabycarla">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/default_icon_birth"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/round_icon_birth"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".GoogleSignInActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".BabyEditActivity" />
+        <activity android:name=".BabyAddActivity" />
+        <activity android:name=".ExtraActionActivity" />
+        <activity
+            android:name=".NewActionActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".BreastFeedingActivity" />
+        <activity android:name=".BabyBottleActivity" />
+        <activity android:name=".DiaperActivity" />
+        <activity android:name=".SleepActivity" />
+        <activity android:name=".MedicineActivity" />
+        <activity
+            android:name=".NewMedicineActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".BabyActionEditActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".LaunchNotification" />
+    </application>
+
+</manifest>
